@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica Carrito de Compras</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="contenedor">
+      <h1>Tienda Online</h1>
+
+      <!-- PRODUCTOS -->
+      <section class="productos">
+        <article class="card">
+          <img src="https://picsum.photos/300/200?random=1" alt="Producto 1" />
+
+          <div class="info">
+            <h3>Notebook Gamer</h3>
+            <p class="precio">$1200</p>
+
+            <!-- 
+            IDEAS:
+            - usar data-id
+            - usar data-nombre
+            - usar data-precio
+          -->
+
+            <button class="btn agregar-carrito" data-id="1">
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/300/200?random=2" alt="Producto 2" />
+
+          <div class="info">
+            <h3>Mouse RGB</h3>
+            <p class="precio">$80</p>
+
+            <button class="btn agregar-carrito" data-id="2">
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/300/200?random=3" alt="Producto 3" />
+
+          <div class="info">
+            <h3>Teclado Mecánico</h3>
+            <p class="precio">$150</p>
+
+            <button class="btn agregar-carrito" data-id="3">
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <!-- CARRITO -->
+      <section class="carrito">
+        <h2>Carrito</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+
+          <tbody id="lista-carrito">
+            <!--
+            ACA VAS A INSERTAR LOS PRODUCTOS DESDE JS
+          --></tbody>
+        </table>
+
+        <button id="vaciar-carrito" class="vaciar-carrito">
+          Vaciar carrito
+        </button>
+        <p class="carrito-total">
+          Total productos: <span id="total-productos">0</span>
+        </p>
+      </section>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
